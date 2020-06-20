@@ -1,0 +1,705 @@
+// Variables
+
+$land_dark: #803300;
+$land_mid: #b34700;
+$land_light: #cc5200;
+
+$moon-dark:#8c8c8c;
+$moon-mid:#b3b3b3;
+$moon-light:#e6e6e6;
+
+
+$earth-dark-water: #003380; 
+$earth-mid-water: #003d99;
+$earth-light-water: #005ce6;
+
+$orange-light: #fecf4e;
+$orange: #a62a44;
+$orange-dark: #310441;
+
+$blue-light: #70a27d;
+$blue: #4552a1;
+$blue-dark: #371a6a;
+
+$bg-light: #ee7752;
+$bg-semi: #e73c7e;
+$bg-middle: #23d5ab;
+$bg-dark: #235bd5;
+
+
+$wall-light: #dab4b4;
+$wall-semi: #cfdfa9;
+$wall-middle: #a5cfd6;
+$wall-dark: #c8a3dd;
+
+
+$bk-light: #ffffff;
+$bk-semi: #b3ffff;
+$bk-middle: #ffdd99;
+$bk-dark: #99e699;
+
+
+body {
+  background: #fafaf0;
+}
+
+.heading {
+  position: relative;
+  width: 70%;
+  min-width: 350px;
+  height: 60px;
+  padding-top: 30px;
+  margin: 10px auto;
+  background: white;
+//   background-size: 400% 400%;
+  border: 1px solid white;
+
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(black, .3)
+}
+
+.heading-text
+{
+  text-align: center;
+  color: grey;
+  font-size: 25px;
+  margin: auto auto;
+}
+
+.container-width{
+    width: 600px;
+}
+
+.container {
+  position: relative;
+  height: 450px;
+  margin: 50px auto;
+  background: linear-gradient(-45deg, $wall-light, $wall-semi, $wall-middle, $wall-dark);
+  background-size: 400% 400%;
+  animation: daylight 15s ease infinite;
+  border-radius: 2.5%;
+  border: 1px soid white;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(black, .3)
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom, $earth-dark-water 1%, $earth-mid-water 50%, $earth-light-water 100%);
+  border-radius: 50%;
+  transform: rotate(-15deg) translate(-35%, -55%);
+}
+
+.land_one {
+  position: absolute;
+  top: 37%;
+  left: 33%;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  -webkit-clip-path: polygon(13.33% 40.00%,20.00% 51.55%,17.13% 41.52%,19.10% 39.31%,23.07% 55.89%,37.93% 67.69%,30.90% 55.85%,31.38% 49.32%,33.63% 43.46%,40.35% 41.13%,46.51% 43.37%,53.99% 43.28%,56.53% 55.64%,57.20% 48.02%,64.36% 39.66%,64.75% 31.48%,68.34% 24.80%,73.72% 21.43%,72.29% 15.26%,76.64% 12.52%,82.14% 14.65%,81.13% 10.51%,71.13% 9.16%,69.52% 4.21%,64.30% 2.71%,59.28% 9.01%,46.38% 7.76%,52.12% 2.53%,39.79% 3.52%,33.03% 1.61%,22.65% 3.26%,10.06% 2.48%,3.56% 11.29%,17.51% 12.90%,18.67% 25.31%);
+  clip-path: polygon(13.33% 40.00%,20.00% 51.55%,17.13% 41.52%,19.10% 39.31%,23.07% 55.89%,37.93% 67.69%,30.90% 55.85%,31.38% 49.32%,33.63% 43.46%,40.35% 41.13%,46.51% 43.37%,53.99% 43.28%,56.53% 55.64%,57.20% 48.02%,64.36% 39.66%,64.75% 31.48%,68.34% 24.80%,73.72% 21.43%,72.29% 15.26%,76.64% 12.52%,82.14% 14.65%,81.13% 10.51%,71.13% 9.16%,69.52% 4.21%,64.30% 2.71%,59.28% 9.01%,46.38% 7.76%,52.12% 2.53%,39.79% 3.52%,33.03% 1.61%,22.65% 3.26%,10.06% 2.48%,3.56% 11.29%,17.51% 12.90%,18.67% 25.31%);
+  background: linear-gradient(to bottom, $land_dark 1%, $land_mid 50%, $land_light 100%);
+  transform: rotate(15deg);
+  transform: skew(-20deg,10deg);
+}
+
+.land_two {
+  position: absolute;
+  top: 52%;
+  left: 40%;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  -webkit-clip-path: polygon(27.53% 21.60%,20.87% 24.17%,15.40% 29.95%,15.23% 35.92%,16.55% 41.51%,19.47% 46.29%,29.25% 52.44%,30.63% 60.79%,32.43% 68.73%,28.02% 78.47%,24.02% 86.61%,22.52% 90.68%,22.42% 93.54%,25.62% 92.70%,30.21% 90.66%,39.41% 86.58%,54.41% 77.50%,63.51% 67.56%,69.36% 62.09%,72.38% 57.55%,74.10% 51.49%,75.01% 44.82%,75.31% 36.94%,74.20% 29.46%,71.50% 22.68%,67.35% 20.38%,59.68% 13.94%,50.74% 16.02%,42.60% 14.49%,33.33% 19.89%,30.80% 17.95%,29.87% 15.40%,29.48% 11.73%,30.70% 7.45%,27.72% 11.18%,23.93% 13.11%,18.10% 12.41%,11.47% 9.91%,20.80% 15.75%,26.47% 15.68%,28.30% 18.64%);
+  clip-path: polygon(27.53% 21.60%,20.87% 24.17%,15.40% 29.95%,15.23% 35.92%,16.55% 41.51%,19.47% 46.29%,29.25% 52.44%,30.63% 60.79%,32.43% 68.73%,28.02% 78.47%,24.02% 86.61%,22.52% 90.68%,22.42% 93.54%,25.62% 92.70%,30.21% 90.66%,39.41% 86.58%,54.41% 77.50%,63.51% 67.56%,69.36% 62.09%,72.38% 57.55%,74.10% 51.49%,75.01% 44.82%,75.31% 36.94%,74.20% 29.46%,71.50% 22.68%,67.35% 20.38%,59.68% 13.94%,50.74% 16.02%,42.60% 14.49%,33.33% 19.89%,30.80% 17.95%,29.87% 15.40%,29.48% 11.73%,30.70% 7.45%,27.72% 11.18%,23.93% 13.11%,18.10% 12.41%,11.47% 9.91%,20.80% 15.75%,26.47% 15.68%,28.30% 18.64%);
+  background: linear-gradient(to bottom, $land_dark 1%, $land_mid 50%, $land_light 100%);
+  transform: rotate(15deg);
+  transform: skew(10deg,0deg);
+  box-shadow: 30px 30px 30px white;
+}
+
+.receipt {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  z-index: 2;
+  width: 160px;
+  height: 120px;
+  font-size: 4px;
+  line-height: 80%;
+  -webkit-clip-path: polygon(21.73% 69.00%,24.13% 69.42%,24.83% 63.02%,26.53% 56.43%,28.52% 52.06%,30.90% 47.72%,33.14% 43.95%,38.02% 38.00%,42.97% 33.31%,48.07% 28.52%,54.28% 24.34%,61.48% 21.19%,67.10% 20.09%,73.53% 20.69%,78.40% 22.49%,78.13% 20.69%,72.47% 18.80%,66.73% 17.51%,60.13% 17.25%,53.13% 18.99%,46.13% 21.08%,40.13% 24.45%,34.92% 28.79%,29.70% 35.08%,26.47% 42.46%,23.20% 51.61%,22.67% 57.51%,22.20% 63.45%);
+  clip-path: polygon(21.73% 69.00%,24.13% 69.42%,24.83% 63.02%,26.53% 56.43%,28.52% 52.06%,30.90% 47.72%,33.14% 43.95%,38.02% 38.00%,42.97% 33.31%,48.07% 28.52%,54.28% 24.34%,61.48% 21.19%,67.10% 20.09%,73.53% 20.69%,78.40% 22.49%,78.13% 20.69%,72.47% 18.80%,66.73% 17.51%,60.13% 17.25%,53.13% 18.99%,46.13% 21.08%,40.13% 24.45%,34.92% 28.79%,29.70% 35.08%,26.47% 42.46%,23.20% 51.61%,22.67% 57.51%,22.20% 63.45%);
+  background: linear-gradient(to bottom, $moon-dark 1%, $moon-light 50%, $moon-dark 100%);
+  transform: rotate(15deg);
+  transform: skew(10deg,0deg);
+  box-shadow: 30px 30px 30px white;
+}
+
+.cloud-mini
+{
+  position: absolute;
+  z-index: 2;
+  background: white;
+  opacity: .2;
+}
+
+.cloud-mini-1
+{
+  position: absolute;
+  top: 37%;
+  left: 38%;
+  z-index: 2;
+  width: 60px;
+  height: 20px;
+  border-radius: 40%/100% ;
+  opacity: .3;
+  animation: cloud-moving 10s 0s linear infinite
+}
+
+.cloud-mini-2
+{
+  position: absolute;
+  top: 44%;
+  left: 55%;
+  z-index: 2;
+  width: 30px;
+  height: 10px;
+  border-radius: 40%/100% ;
+  opacity: .3;
+  animation: cloud-moving 15s 0s linear infinite
+}
+
+.cloud-mini-3
+{
+  position: absolute;
+  top: 47%;
+  left: 52%;
+  z-index: 2;
+  width: 10px;
+  height: 5px;
+  border-radius: 40%/100% ;
+  opacity: .3;
+  animation: cloud-moving 14s 0s linear infinite
+}
+
+.cloud-mini-4
+{
+  position: absolute;
+  top: 56%;
+  left: 37%;
+  z-index: 2;
+  width: 40px;
+  height: 10px;
+  border-radius: 40%/100% ;
+  opacity: .3;
+  animation: cloud-moving 18s 0s linear infinite
+}
+
+.cloud-mini-5
+{
+  position: absolute;
+  top:58%;
+  left: 47%;
+  z-index: 2;
+  width: 45px;
+  height: 15px;
+  border-radius: 40%/100% ;
+  opacity: .3;
+  animation: cloud-moving 16s 0s linear infinite
+}
+
+@supports not (clip-path: inset(50% 0 0 0)) {
+  .ring-before,
+  .ring-after,
+  .ring-bigger-before,
+  .ring-bigger-after {
+    display: none;
+  }
+}
+
+.ring-before,
+.ring-after,
+.ring-bigger-before,
+.ring-bigger-after {
+  content: "";
+  width: 126px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid rgba(#f8c54d, .8);
+  position: absolute;
+  top: 125px;
+  left: 84px;
+  transform: skew(-54deg);
+}
+
+.ring-bigger-before,
+.ring-bigger-after {
+  transform: skew(-54deg) scale(1.3);
+  border-color: rgb(211, 188, 104);
+}
+
+.ring-before,
+.ring-bigger-before {
+  z-index: 3;
+  clip-path: inset(50% 0 0 0);
+}
+
+.ring-after,
+.ring-bigger-after {
+  z-index: 1;
+  clip-path: inset(0 0 50% 0);
+}
+
+.sub-planet {
+  position: absolute;
+  top: 24%;
+  left: 75%;
+  z-index: 4;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(to bottom, $moon-light 1%, $moon-mid 50%, $moon-dark 100%);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+}
+
+.sub-planet-spot
+{
+  position: absolute;
+  background: linear-gradient(to bottom, $moon-light 1%, $moon-mid 50%, $moon-dark 100%);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+}
+
+.spot-1
+{
+  opacity: 0.4;
+  top: 25%;
+  left: 77%;
+  z-index: 4;
+  width: 10px;
+  height: 10px;
+}
+
+.spot-2
+{
+  opacity: 0.4;
+  top: 27%;
+  left: 81%;
+  z-index: 4;
+  width: 10px;
+  height: 10px;
+}
+
+.spot-3
+{
+  opacity: 0.6;
+  top: 29%;
+  left: 76%;
+  z-index: 4;
+  width: 7px;
+  height: 7px;
+}
+
+.orbit {
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+@for $i from 1 through 6 {
+  
+  .orbit-#{$i} {
+    animation: orbit-#{$i} 5s * $i linear infinite;
+  }
+  
+  @keyframes orbit-#{$i} {
+    from { transform: rotate(0deg) translateX(50px + 15px * $i) rotate(0deg)      }
+    to   { transform: rotate(360deg) translateX(50px + 15px * $i) rotate(-360deg) }
+  } 
+}
+
+.cloud {
+  background: #f1f1f1;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  bottom: -5px;
+  box-shadow: 0 0 40px rgba(black, .1);
+  
+  &:before,
+  &:after {
+    content: "";
+    background: #f1f1f1;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  &:before {
+    width: 50px;
+    height: 50px;
+    bottom: 2px;
+    left: 5px;
+  }
+  
+  &:after {
+    width: 40px;
+    height: 40px;
+    bottom: 2px;
+    right: 15px;
+  }
+}
+
+.table{
+    position: absolute;
+    background: wheat;
+    bottom: 0px;
+    background-image: url(../img/texture/wood.jpg);
+    // Uses container with
+    // width: auto;
+    height: 150px;
+    opacity: 1;
+    // clip-path: polygon(15% 0%, 85% 0, 100% 80%, 0 80%);
+  }
+
+.shadow{
+  -webkit-box-shadow: 0 8px 6px -6px black;
+}
+
+.table-skew{
+  bottom: 10px;
+  left:60px;
+  width: 480px;
+  opacity: 0.7;
+  -webkit-transform: perspective(300px) rotateX(50deg);    
+}
+
+.table-edge{
+  bottom: 10px;
+  left:4px;
+  width: 592px;
+  height: 15.6px;
+  // clip-path: polygon(1% 83%, 99% 83%, 99% 92%, 1% 92%);
+	-webkit-box-shadow: 0 8px 6px -6px black;
+}
+
+.table-support{
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  clip-path: polygon(1% 92%, 99% 92%, 99% 100%, 1% 100%);
+}
+
+.table-backgroud 
+{
+  background: white;
+  opacity: 0.8;
+} 
+
+.cloud-group-1,
+.cloud-group-2,
+.cloud-group-3 {
+  position: absolute;
+  bottom: 0;
+  width: 211px;
+  height: 100px;
+  opacity: .2;
+}
+
+.cloud-group-1 {
+  bottom: -5px;
+}
+
+.cloud-group-2 {
+  transform: scale(2);
+  bottom: 20px;
+  left: -50px;
+}
+
+.cloud-group-3 {
+  transform: scale(3);
+  bottom: 100px;
+  left: -24px;
+}
+
+.cloud-2 { left: 10px }
+.cloud-3 { right: 10px }
+.cloud-4 { right: 184px; bottom: 0 }
+.cloud-5 { right: 24px; bottom: 12px }
+.cloud-6 { right: -45px; bottom: 9 }
+
+.star {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  animation: shooting 5s linear infinite;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    right: 1px;
+    top: 0;
+    background: linear-gradient(to right, rgba(black, 0) 0%,rgba(white, .4) 100%);    
+  }
+}
+
+.star-2 { top: 100px; animation: shooting 8s 1s linear infinite }
+.star-3 { top: 250px; animation: shooting 3s 2s linear infinite }
+
+@keyframes daylight {
+  0%   { background-position: 0% 50%   }
+  50%  { background-position: 100% 50% }
+  100% { background-position: 0% 50%   }
+}
+
+@keyframes shooting {
+  from { left: -100px             }
+  to   { left: calc(100% + 100px) }
+}
+
+@keyframes cloud-moving {
+  0% { transform: translate(5px, 0px) rotate(0deg); }
+  50% { transform: translate(-5px, 0px) rotate(0deg); }
+  100% { transform: translate(5px, 0px) rotate(0deg); }
+}
+
+.row-top {
+  margin-top: 10x auto;
+}
+
+.row {
+  position: relative;
+  width: 40%;
+  min-width: 450px;
+  height: 30px;
+  margin: -1px auto;
+  background: linear-gradient(-45deg, $bk-light, $bk-semi, $bk-middle, $bk-dark);
+  background-size: 400% 400%;
+  animation: daylight 50s 0s ease infinite;
+  overflow: hidden;
+  font-style: normal;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  // box-shadow: 0 0 20px rgba(black, .3),
+  //             inset 0 0 0 15px rgba(black, .05),
+  //             inset 0 0 0 30px rgba(black, .05),
+  //             inset 0 0 0 45px rgba(black, .05),
+  //             inset 0 0 0 60px rgba(black, .05),
+  //             inset 0 0 0 75px rgba(black, .05),
+  //             inset 0 0 0 90px rgba(black, .05);
+}
+
+.row-name {
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-right: 2%;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  position: relative;
+  float: left;
+  width: 37%;
+  min-width: 180px;
+  height: 100%;
+  font-size: 15px;
+  text-align: right;
+}
+
+.row-number {
+  text-align: center;
+}
+
+.row-size {
+  padding-left: 10px;
+  padding-top: 7px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  position: relative;
+  float: left;
+  height: 100%;
+  font-size: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  width:19%;
+  min-width: 90px;
+  text-align: center;
+}
+
+.row-count {
+  padding-left: 10px;
+  padding-top: 7px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  position: relative;
+  float: left;
+  height: 100%;
+  font-size: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  width:29%;
+  min-width: 134px;
+  text-align: center;
+}
+
+.footer{
+  position: relative;
+  width: 40%;
+  min-width: 350px;
+  height: 30px;
+  padding: 10px;
+  margin: 30px auto;
+  background-size: 400% 400%;
+  animation: daylight 50s 5s ease infinite;
+  border-radius: 0%;
+
+  overflow: hidden;
+}
+
+.footer-item{
+  position:relative;
+  width:33%;
+  text-align: center;
+  margin: auto auto;
+  float: left;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+@media all and (max-width: 500px) {
+  .heading {
+    position: relative;
+    width: auto;
+    min-width: 250px;
+    height: 60px;
+    padding-top: 30px;
+    margin: 10px auto;
+    background: linear-gradient(-45deg, $bg-light, $bg-semi, $bg-middle, $bg-dark);
+    background-size: 400% 400%;
+    animation: daylight 50s 5s ease infinite;
+    border-radius: 0%;
+    border: 1px solid white;
+  
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(black, .3),
+                inset 0 0 0 15px rgba(black, .05),
+                inset 0 0 0 30px rgba(black, .05),
+                inset 0 0 0 45px rgba(black, .05),
+                inset 0 0 0 60px rgba(black, .05),
+                inset 0 0 0 75px rgba(black, .05),
+                inset 0 0 0 90px rgba(black, .05);
+  }
+
+  .container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    min-width: 300px;
+    margin: 50px auto;
+    background: linear-gradient(-45deg, $bg-light, $bg-semi, $bg-middle, $bg-dark);
+    background-size: 400% 400%;
+    animation: daylight 15s ease infinite;
+    border-radius: 50%;
+    border: 10px solid white;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(black, .3),
+                inset 0 0 0 15px rgba(black, .05),
+                inset 0 0 0 30px rgba(black, .05),
+                inset 0 0 0 45px rgba(black, .05),
+                inset 0 0 0 60px rgba(black, .05),
+                inset 0 0 0 75px rgba(black, .05),
+                inset 0 0 0 90px rgba(black, .05);
+  }
+
+  .row {
+    position: relative;
+    width: 100%;
+    min-width: 250px;
+    height: 30px;
+    margin: -1px auto;
+    background: linear-gradient(-45deg, $bk-light, $bk-semi, $bk-middle, $bk-dark);
+    background-size: 400% 400%;
+    animation: daylight 50s 0s ease infinite;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 10px;
+  }
+    
+  .row-name {
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-right: 2%;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    position: relative;
+    float: left;
+    width: 27%;
+    min-width: 80px;
+    height: 100%;
+    font-size: 15px;
+    text-align: right;
+  }
+
+  .row-number {
+    text-align: center;
+    font-size: 10px;
+    width:10%;
+  }
+  
+  .row-size {
+    font-size: 10px;
+    padding-left: 0px;
+    padding-top: 7px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    position: relative;
+    float: left;
+    height: 100%;
+    font-size: 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    width:10%;
+    text-align: center;
+  }
+  
+  .row-count {
+    padding-left: 10px;
+    padding-top: 7px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    position: relative;
+    float: left;
+    height: 100%;
+    font-size: 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    width:29%;
+    text-align: center;
+  }
+  
+  .footer{
+    position: relative;
+    width: 40%;
+    min-width: 350px;
+    height: 30px;
+    padding: 10px;
+    margin: 30px auto;
+    background-size: 400% 400%;
+    animation: daylight 50s 5s ease infinite;
+    border-radius: 0%;
+  
+    overflow: hidden;
+  }
+
+}
