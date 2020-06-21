@@ -528,6 +528,39 @@ body {
   opacity: 0.8;
 }
 
+.tank {
+  position: absolute;
+  bottom: 250px;
+  left: 400px;
+}
+
+.tank .middle {
+  width: 50px;
+  height: 45px;
+  background-color: #444;
+  position: absolute;
+}
+
+.tank .top {
+  width: 50px;
+  height: 25px;
+  background-color: #666;
+  border-radius: 50px / 25px;
+  position: absolute;
+  top: -12px;
+}
+
+.tank .bottom {
+  width: 50px;
+  height: 25px;
+  background-color: #444;
+  border-radius: 50px / 25px;
+  position: absolute;
+  top: 35px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+}
+
 .cloud-group-1,
 .cloud-group-2,
 .cloud-group-3 {
